@@ -1,0 +1,76 @@
+{
+    "title": "Line-level NER in IAM-6 with GT segmentation",
+    "gt_path": "gt_bio_labels.zip",
+    "res_ext": "zip",
+    "methodMetrics": {
+        "ecer": {
+            "long_name": "ECER",
+            "type": "double",
+            "order": "asc",
+            "grafic": "1",
+            "format": "",
+            "groupby": "",
+            "separation": "",
+            "table_group_name": "",
+            "graphic_name": ""
+        },
+        "ewer": {
+            "long_name": "EWER",
+            "type": "double",
+            "order": "asc",
+            "grafic": "2",
+            "format": "",
+            "groupby": "",
+            "separation": "",
+            "table_group_name": "",
+            "graphic_name": ""
+        },
+        "nerval-f1": {
+            "long_name": "Nerval-F1",
+            "type": "double",
+            "order": "desc",
+            "grafic": "3",
+            "format": "",
+            "groupby": "",
+            "separation": "",
+            "table_group_name": "",
+            "graphic_name": ""
+        },
+        "nerval-p": {
+            "long_name": "Nerval-P",
+            "type": "double",
+            "order": "desc",
+            "grafic": "",
+            "format": "",
+            "groupby": "",
+            "separation": "",
+            "table_group_name": "",
+            "graphic_name": ""
+        },
+        "nerval-r": {
+            "long_name": "Nerval-R",
+            "type": "double",
+            "order": "desc",
+            "grafic": "",
+            "format": "",
+            "groupby": "",
+            "separation": "",
+            "table_group_name": "",
+            "graphic_name": ""
+        }
+    },
+    "script": "evaluation",
+    "scriptRequirements": {
+        "ie-eval": "0.2.0a1"
+    },
+    "dockerDomain": "",
+    "methodParameters": {},
+    "userParameters": {},
+    "uploadInstructions": "<p>Upload a .zip file with all the .bio files, one of each sample image. .bio files have a single line for each word with its corresponding tag separated by a space, following the format:</p><p>word_1 tag_1</p><p>word_2 tag_2</p><p>...</p><p>word_i tag_i</p><p>&nbsp;</p><p>If, for example, for the image b00-000-1.png we have the output:</p><p>George@P Washington@P lives in Washington@L</p><p>The file b00-000-1.bio would have:</p><p>George B-P</p><p>Washington I-P</p><p>lives O</p><p>in O</p><p>Washington B-L</p>",
+    "samples_path": "",
+    "samplesRegExp": "",
+    "sampleMetrics": {},
+    "visualization": "",
+    "samples": false,
+    "docker": false
+}
